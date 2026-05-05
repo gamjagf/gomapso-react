@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  background: #fbf5eb;
+  color: #2f261d;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* 전체 앱 */
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* 상단 메뉴 */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 16px 18px;
+  background: rgba(251, 245, 235, 0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(92, 64, 43, 0.12);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #3b2b1f;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.nav-menu button {
+  border: none;
+  white-space: nowrap;
+  background: #efe2cf;
+  color: #4b3728;
+  padding: 9px 13px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 히어로 */
+.hero {
+  min-height: 82vh;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top left, rgba(191, 145, 75, 0.28), transparent 36%),
+    linear-gradient(135deg, #fbf5eb 0%, #ead9c1 52%, #254335 100%);
+}
+
+.hero-card {
+  max-width: 760px;
+  width: 100%;
+  padding: 34px 24px;
+  border-radius: 32px;
+  background: rgba(255, 250, 242, 0.88);
+  box-shadow: 0 24px 60px rgba(51, 34, 20, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.eyebrow,
+.section-label {
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  color: #9b713d;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  line-height: 1.25;
+  margin: 0 0 18px;
+  color: #2f241a;
+}
+
+.hero-text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #5d4a38;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: none;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #2f4f3f;
+  color: #fffaf2;
+  box-shadow: 0 10px 24px rgba(47, 79, 63, 0.28);
+}
+
+.secondary-btn {
+  background: #d7b06d;
+  color: #2f241a;
+}
+
+/* 공통 섹션 */
+.section {
+  padding: 72px 20px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 28px;
+  line-height: 1.35;
+  margin: 0 0 18px;
+  color: #302418;
+}
+
+.section-text {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #5f4a38;
+  margin: 0;
+}
+
+.soft-bg {
+  max-width: none;
+  background: #f3e8d8;
+}
+
+.soft-bg > * {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 카드 */
+.card-grid,
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.info-card,
+.menu-card {
+  background: #fffaf2;
+  border-radius: 26px;
+  padding: 26px 22px;
+  box-shadow: 0 16px 36px rgba(75, 51, 30, 0.1);
+  border: 1px solid rgba(119, 83, 47, 0.1);
+}
+
+.info-card span {
+  font-size: 32px;
+}
+
+.info-card h3,
+.menu-card h3 {
+  font-size: 21px;
+  margin: 14px 0 10px;
+  color: #3b2b1f;
+}
+
+.info-card p,
+.menu-card p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #66513c;
+  margin: 0;
+}
+
+.menu-card {
+  background:
+    linear-gradient(145deg, #fffaf2, #f1dfc7);
+}
+
+/* 이용 안내 */
+.guide-box {
+  margin-top: 28px;
+  background: #fffaf2;
+  border-radius: 28px;
+  padding: 28px 22px;
+  box-shadow: 0 16px 36px rgba(75, 51, 30, 0.1);
+}
+
+.guide-box p {
+  font-size: 17px;
+  font-weight: 700;
+  color: #3f3024;
+  margin: 12px 0;
+}
+
+/* 위치 */
+.location {
+  text-align: center;
+}
+
+/* 푸터 */
+.footer {
+  padding: 30px 18px;
+  text-align: center;
+  background: #263e32;
+  color: #f8ead4;
+  font-size: 14px;
+}
+
+/* 은은한 등장 효과 */
+.fade-in {
+  animation: fadeIn 1.1s ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 태블릿 이상 */
+@media (min-width: 720px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 42px;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero-card {
+    padding: 58px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .section h2 {
+    font-size: 38px;
+  }
+}
